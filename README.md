@@ -37,8 +37,8 @@ This service is built with **Spring Boot** and uses **JPA** for smooth database 
       "availability": false
     }
   ]
-```
-###🔧 Technologies Used
+
+### 🔧 Technologies Used
 
  - Spring Boot for building the application.
  - JPA (Java Persistence API) for seamless database integration.
