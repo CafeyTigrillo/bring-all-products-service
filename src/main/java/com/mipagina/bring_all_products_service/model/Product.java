@@ -6,28 +6,29 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+
 @Entity
 @Schema(description = "Product representing a menu item in the restaurant")
 public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Schema(description = "Unique identifier for the product", example = "1")
+    @Schema(description = "Unique identifier for the product. Required for operations such as retrieval and updates.", example = "1")
     private Long id_product;
 
-    @Schema(description = "Name of the product", example = "Deluxe Burger")
+    @Schema(description = "Name of the product. Essential for product identification.", example = "Deluxe Burger")
     private String name;
 
-    @Schema(description = "Description of the product", example = "Gourmet burger with beef patty, cheese, and fresh vegetables")
+    @Schema(description = "Description of the product detailing its ingredients or features.", example = "Gourmet burger with beef patty, cheese, and fresh vegetables")
     private String description;
 
-    @Schema(description = "Price of the product", example = "15.99")
+    @Schema(description = "Price of the product in USD. Used for billing and display.", example = "15.99")
     private Double price;
 
-    @Schema(description = "Category ID to which the product belongs", example = "2")
+    @Schema(description = "Category ID to which the product belongs. Important for filtering products.", example = "2")
     private Long id_category;
 
-    @Schema(description = "Availability of the product", example = "true")
+    @Schema(description = "Availability status of the product. Determines whether it can be ordered.", example = "true")
     private Boolean availability;
 
     public Long getId_product() {
