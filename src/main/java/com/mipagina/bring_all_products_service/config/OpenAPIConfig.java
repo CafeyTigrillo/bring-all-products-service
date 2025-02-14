@@ -7,9 +7,18 @@ import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.License;
 
+/**
+ * OpenAPI Configuration for Bring All Products API.
+ * This configuration sets up the API documentation using OpenAPI and Swagger.
+ */
 @Configuration
 public class OpenAPIConfig {
 
+    /**
+     * Configures the OpenAPI documentation with API details.
+     *
+     * @return OpenAPI object containing API metadata.
+     */
     @Bean
     public OpenAPI customOpenAPI() {
         Contact contact = new Contact();
